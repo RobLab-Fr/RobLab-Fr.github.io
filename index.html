@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Science Merch Lab</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -24,24 +24,57 @@
   <p>Vêtements et objets scientifiques personnalisables</p>
 </section>
 
-<!-- Produit -->
-<section class="product">
-  <div class="product-preview" id="preview">
-    <span id="product-text">RYR1</span>
-  </div>
+<!-- Produits -->
+<section class="products">
 
-  <div class="product-options">
-    <h2>T-shirt scientifique</h2>
-    <p>Choisis ta couleur</p>
-
-    <div class="colors">
-      <button class="color pink" onclick="changeColor('#ff4ecd')"></button>
-      <button class="color blue" onclick="changeColor('#4e9cff')"></button>
-      <button class="color green" onclick="changeColor('#2ecc71')"></button>
-      <button class="color yellow" onclick="changeColor('#f1c40f')"></button>
-      <button class="color black" onclick="changeColor('#111')"></button>
+  <!-- T-shirt -->
+  <div class="product-card">
+    <div class="product-preview" id="preview-tshirt">
+      <span id="text-tshirt">RYR1</span>
     </div>
+    <h2>T-shirt</h2>
+    <div class="colors">
+      <button class="color pink" onclick="changeColor('preview-tshirt','#ff4ecd')"></button>
+      <button class="color blue" onclick="changeColor('preview-tshirt','#4e9cff')"></button>
+      <button class="color green" onclick="changeColor('preview-tshirt','#2ecc71')"></button>
+      <button class="color yellow" onclick="changeColor('preview-tshirt','#f1c40f')"></button>
+      <button class="color black" onclick="changeColor('preview-tshirt','#111')"></button>
+    </div>
+    <input type="text" placeholder="Nom de gène" oninput="changeText('text-tshirt', this.value)">
   </div>
+
+  <!-- Tote bag -->
+  <div class="product-card">
+    <div class="product-preview" id="preview-tote">
+      <span id="text-tote">SCIENCE</span>
+    </div>
+    <h2>Tote bag</h2>
+    <div class="colors">
+      <button class="color pink" onclick="changeColor('preview-tote','#ff4ecd')"></button>
+      <button class="color blue" onclick="changeColor('preview-tote','#4e9cff')"></button>
+      <button class="color green" onclick="changeColor('preview-tote','#2ecc71')"></button>
+      <button class="color yellow" onclick="changeColor('preview-tote','#f1c40f')"></button>
+      <button class="color black" onclick="changeColor('preview-tote','#111')"></button>
+    </div>
+    <input type="text" placeholder="Message" oninput="changeText('text-tote', this.value)">
+  </div>
+
+  <!-- Mug -->
+  <div class="product-card">
+    <div class="product-preview" id="preview-mug">
+      <span id="text-mug">H₂O</span>
+    </div>
+    <h2>Mug</h2>
+    <div class="colors">
+      <button class="color pink" onclick="changeColor('preview-mug','#ff4ecd')"></button>
+      <button class="color blue" onclick="changeColor('preview-mug','#4e9cff')"></button>
+      <button class="color green" onclick="changeColor('preview-mug','#2ecc71')"></button>
+      <button class="color yellow" onclick="changeColor('preview-mug','#f1c40f')"></button>
+      <button class="color black" onclick="changeColor('preview-mug','#111')"></button>
+    </div>
+    <input type="text" placeholder="Message scientifique" oninput="changeText('text-mug', this.value)">
+  </div>
+
 </section>
 
 <footer>
@@ -49,12 +82,14 @@
 </footer>
 
 <script>
-  function changeColor(color) {
-    document.getElementById("preview").style.background = color;
+  function changeColor(id, color) {
+    document.getElementById(id).style.background = color;
+  }
+
+  function changeText(id, text) {
+    document.getElementById(id).innerText = text || '';
   }
 </script>
 
 </body>
 </html>
-
-
