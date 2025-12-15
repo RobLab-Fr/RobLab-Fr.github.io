@@ -165,32 +165,26 @@ footer {
 
 .product-preview {
   position: relative;
-  width: 280px;      /* largeur fixe pour tous les produits */
-  height: 320px;     /* hauteur fixe pour tous les produits */
+  display: inline-block;   /* prend seulement la taille de l'image */
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent; /* plus de couleur de fond */
+  text-align: center;
 }
-
 .product-preview img.mockup {
-  position: absolute;
-  width: 100%;       /* force l'image à remplir le bloc */
-  height: 100%;      /* idem pour la hauteur */
-  object-fit: contain; /* préserve les proportions */
-  top: 0;
-  left: 0;
+  display: block;
+  width: auto;   /* garde la proportion réelle */
+  height: 250px; /* hauteur fixe pour tous */
+  margin: 0 auto; /* centre l'image */
 }
-
 .product-preview span {
-  position: relative;      /* au-dessus de l'image */
-  color: white;            /* ou autre selon la couleur du mockup */
-  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
-  padding: 0 10px;
-  z-index: 2;              /* assure que le texte est devant */
+  z-index: 2;
 }
