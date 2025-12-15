@@ -87,8 +87,12 @@
   }
 
   function changeText(id, text) {
-    document.getElementById(id).innerText = text || '';
-  }
+  const el = document.getElementById(id);
+  el.innerText = text || '';
+  el.classList.add('changed');
+  setTimeout(() => el.classList.remove('changed'), 200);
+}
+
 </script>
 
 </body>
