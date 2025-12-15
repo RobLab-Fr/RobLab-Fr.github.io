@@ -194,12 +194,3 @@ footer {
   padding: 0 10px;
   z-index: 2;              /* assure que le texte est devant */
 }
-
-.product-preview span {
-  position: relative;
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-  padding: 0 10px;
-}
