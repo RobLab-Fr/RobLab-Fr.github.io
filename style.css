@@ -165,7 +165,7 @@ footer {
 
 .product-preview {
   position: relative;
-  width: 240px;      /* largeur fixe pour tous */
+  width: 200px;      /* largeur fixe pour tous */
   height: 250px;     /* hauteur fixe pour tous */
   border-radius: 24px;
   overflow: hidden;
