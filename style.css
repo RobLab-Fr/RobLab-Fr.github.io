@@ -142,3 +142,23 @@ footer {
 .product-preview span.changed {
   transform: scale(1.1);
 }
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: #ff4ecd;
+  width: 0%;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
