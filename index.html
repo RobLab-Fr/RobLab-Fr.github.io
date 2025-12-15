@@ -2,40 +2,59 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>SCIENCE MERCH LAB</title>
+  <title>Science Merch Lab</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>SCIENCE MERCH LAB</h1>
-  <p>Vêtements & objets scientifiques personnalisables</p>
-</header>
+<!-- Bandeau catégories -->
+<nav class="navbar">
+  <div class="logo">SCIENCE MERCH LAB</div>
+  <ul>
+    <li>Vêtements</li>
+    <li>Tote bags</li>
+    <li>Mugs</li>
+    <li>Personnalisation</li>
+  </ul>
+</nav>
 
-<section class="products">
-  <div class="card">
-    <h2>T-shirt</h2>
-    <p>Choisis ton gène, ta couleur, ton message</p>
-    <button>Personnaliser</button>
+<!-- Hero -->
+<section class="hero">
+  <h1>La science, mais stylée</h1>
+  <p>Vêtements et objets scientifiques personnalisables</p>
+</section>
+
+<!-- Produit -->
+<section class="product">
+  <div class="product-preview" id="preview">
+    <span id="product-text">RYR1</span>
   </div>
 
-  <div class="card">
-    <h2>Tote bag</h2>
-    <p>Science, mais écolo</p>
-    <button>Personnaliser</button>
-  </div>
+  <div class="product-options">
+    <h2>T-shirt scientifique</h2>
+    <p>Choisis ta couleur</p>
 
-  <div class="card">
-    <h2>Mug</h2>
-    <p>Pour survivre aux réunions</p>
-    <button>Personnaliser</button>
+    <div class="colors">
+      <button class="color pink" onclick="changeColor('#ff4ecd')"></button>
+      <button class="color blue" onclick="changeColor('#4e9cff')"></button>
+      <button class="color green" onclick="changeColor('#2ecc71')"></button>
+      <button class="color yellow" onclick="changeColor('#f1c40f')"></button>
+      <button class="color black" onclick="changeColor('#111')"></button>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>Projet expérimental – pas de vente réelle</p>
+  Projet expérimental – pas de vente réelle
 </footer>
+
+<script>
+  function changeColor(color) {
+    document.getElementById("preview").style.background = color;
+  }
+</script>
 
 </body>
 </html>
+
 
